@@ -99,7 +99,7 @@
       background-size: 60px 60px;
     }
 
-    .hero-content { position: relative; z-index: 1; }
+    .hero-content { position: relative; z-index: 1; max-width: 100%; overflow: hidden;}
 
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -163,7 +163,7 @@
       text-transform: uppercase;
       text-decoration: none;
       border: none; cursor: pointer;
-      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+      border-radius: 2px;
       transition: background 0.3s, transform 0.2s;
     }
     .btn-primary:hover { background: var(--white); transform: translateY(-2px); }
@@ -660,15 +660,33 @@
       section { padding: 4rem 2rem; }
       footer { padding: 2rem; flex-direction: column; text-align: center; }
     }
-
     @media (max-width: 640px) {
       .services-grid { grid-template-columns: 1fr; }
       .form-grid { grid-template-columns: 1fr; }
       .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
-      .hero-actions { flex-direction: column; }
-      #hero { padding: 9rem 1.5rem 3rem ;}
-      .hero-title { font-size: clamp(2rem, 8vw, 4rem); }
-    }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      #hero { padding: 7rem 1.5rem 3rem; }
+
+  /* ── ΤΟ ΚΥΡΙΟ FIX ── */
+      .hero-title {
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      max-width: 100%;
+  }
+
+  /* ── buttons χωρίς clip-path ── */
+     .btn-primary,
+    .btn-secondary {
+     clip-path: none;
+     border-radius: 2px;
+     width: 100%;
+     text-align: center;
+  }
+}
+   
+
   </style>
 </head>
 <body>
