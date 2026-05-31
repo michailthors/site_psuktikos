@@ -661,30 +661,61 @@
       footer { padding: 2rem; flex-direction: column; text-align: center; }
     }
     @media (max-width: 640px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .form-grid { grid-template-columns: 1fr; }
-      .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
-      #hero { padding: 7rem 1.5rem 3rem; }
-
-  /* ── ΤΟ ΚΥΡΙΟ FIX ── */
-      .hero-title {
-      font-size: clamp(2rem, 7vw, 3.5rem);
-      word-break: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
-      max-width: 100%;
+      #hero {
+      padding: 7rem 1rem 3rem;
+      grid-template-columns: 1fr;
   }
 
-  /* ── buttons χωρίς clip-path ── */
-     .btn-primary,
-    .btn-secondary {
-     clip-path: none;
-     border-radius: 2px;
-     width: 100%;
-     text-align: center;
+    .hero-content {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+    letter-spacing: 0;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .line-small {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    clip-path: none;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
+  
    
 
   </style>
@@ -711,33 +742,44 @@
   <div class="hero-grid-lines"></div>
 
   <div class="hero-content">
+
     <div class="hero-badge"></div>
+
     <h1 class="hero-title">
       <span class="line-small">Επαγγελματικές</span>
       <span class="line-accent">Ψυκτικές</span>
       Εγκαταστάσεις
     </h1>
+
     <p class="hero-desc">
       Εγκατάσταση, επισκευή και συντήρηση κλιματιστικών &amp; ψυκτικών συστημάτων
       για επαγγελματικούς και οικιακούς χώρους. Γρήγορη ανταπόκριση, εγγυημένη ποιότητα.
     </p>
+
     <div class="hero-actions">
       <a href="tel:+306977876709" class="btn-primary">📞 Καλέστε Τώρα</a>
       <a href="#services" class="btn-secondary">Οι Υπηρεσίες μας</a>
     </div>
+
     <div class="hero-stats">
       <div class="stat-item">
         <div class="stat-num">15<span>+</span></div>
         <div class="stat-label">Χρόνια Εμπειρίας</div>
       </div>
+
       <div class="stat-item">
         <div class="stat-num">500<span>+</span></div>
         <div class="stat-label">Ολοκληρωμένα Έργα</div>
       </div>
-      
-      </div>
     </div>
+
   </div>
+
+  <div class="hero-visual">
+    <!-- Εδώ μένει όλο το SVG σου -->
+  </div>
+
+</section>
 
   <div class="hero-visual">
     <div class="hero-icon-wrap">
