@@ -121,10 +121,12 @@
 
     .hero-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3.5rem, 6vw, 6rem);
+      font-size: clamp(2.2rem, 6vw, 6rem);
       line-height: 0.95;
       letter-spacing: 2px;
       animation: fadeInUp 0.7s 0.1s ease both;
+      width: 100%;                /* ← νέο */
+      overflow-wrap: break-word;
     }
     .hero-title .line-accent { color: var(--cyan); display: block; }
     .hero-title .line-small {
@@ -748,7 +750,7 @@
     <h1 class="hero-title">
       <span class="line-small">Επαγγελματικές</span>
       <span class="line-accent">Ψυκτικές</span>
-      Εγκαταστάσεις
+      <span class="line-main">Εγκαταστάσεις</span>
     </h1>
 
     <p class="hero-desc">
