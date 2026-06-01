@@ -120,6 +120,9 @@
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
     .hero-title {
+      overflow-wrap: break-word;
+      word-break: break-word; /* For older browser support */
+      hyphens: auto; /* Optional: adds hyphens where appropriate */
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.2rem, 10vw, 6rem);
       line-height: 0.95;
