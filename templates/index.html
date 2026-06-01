@@ -128,7 +128,7 @@
       width: 100%;                /* ← νέο */
       overflow-wrap: break-word;
     }
-    .hero-title .line-accent { color: var(--cyan); display: block; }
+    .hero-title .line-accent { color: var(--cyan); display: inline; }
     .hero-title .line-small {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -663,13 +663,13 @@
       footer { padding: 2rem; flex-direction: column; text-align: center; }
     }
     @media (max-width: 640px)
-     {
-      #hero {
-      padding: 7rem 1rem 3rem;
-      grid-template-columns: 1fr;
+{
+  #hero {
+    padding: 7rem 1rem 3rem;
+    grid-template-columns: 1fr;
   }
 
-    .hero-content {
+  .hero-content {
     width: 100%;
     overflow: visible;
   }
@@ -717,8 +717,12 @@
   .form-grid {
     grid-template-columns: 1fr;
   }
+
+  /* ΠΡΟΣΘΗΚΗ: Διόρθωση για το κείμενο */
+  .hero-title .line-accent {
+    display: inline;
+  }
 }
-  
    
 
   </style>
