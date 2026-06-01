@@ -675,22 +675,32 @@
   }
 
   .hero-title {
-    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
-    line-height: 1.1;
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;  /* ΜΕΙΩΣΑ το μέγεθος */
+    line-height: 1.3 !important;                      /* ΑΥΞΗΣΑ το line-height */
     letter-spacing: 0;
     word-break: normal;
     overflow-wrap: break-word;
   }
 
+  /* ΚΡΙΣΙΜΗ ΑΛΛΑΓΗ: Και τα δύο spans να είναι inline-block */
+  .hero-title .line-small,
+  .hero-title .line-accent {
+    display: inline-block !important;
+    font-size: inherit;
+    white-space: normal;
+  }
+
   .line-small {
-    font-size: 1rem;
+    font-size: 0.85rem;      /* ΜΙΚΡΟΤΕΡΟ για να χωράει */
     letter-spacing: 2px;
+    display: block !important;  /* Αυτό μόνο του θέλουμε block */
+    margin-bottom: 0.25rem;
   }
 
   .hero-desc {
     max-width: 100%;
     width: 100%;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .hero-actions {
@@ -716,11 +726,6 @@
 
   .form-grid {
     grid-template-columns: 1fr;
-  }
-
-  /* ΠΡΟΣΘΗΚΗ: Διόρθωση για το κείμενο */
-  .hero-title .line-accent {
-    display: inline;
   }
 }
    
