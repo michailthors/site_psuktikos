@@ -9,10 +9,10 @@ from datetime import datetime
 app = Flask(__name__)
 
 # ─── ΡΥΘΜΙΣΕΙΣ EMAIL ──────────────────────────────────────
-# Αλλάξτε με τα πραγματικά στοιχεία του θείου σας
+# Αλλάξτε με τα πραγματικά στοιχεία σας
 EMAIL_SENDER   = "info@psyktikeslyseis.gr"
 EMAIL_PASSWORD = "YOUR_EMAIL_PASSWORD"      # ή χρησιμοποιήστε App Password για Gmail
-EMAIL_RECEIVER = "thios@psyktikeslyseis.gr" # το email που θα λαμβάνει τα μηνύματα
+EMAIL_RECEIVER = "user@psyktikeslyseis.gr" # το email που θα λαμβάνει τα μηνύματα
 SMTP_SERVER    = "smtp.gmail.com"           # για Gmail
 SMTP_PORT      = 587
 
@@ -51,7 +51,7 @@ def save_to_db(data: dict):
 
 
 def send_email(data: dict) -> bool:
-    """Στέλνει email στον θείο σας με τα στοιχεία του αιτήματος."""
+    """Στέλνει email με τα στοιχεία του αιτήματος."""
     try:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = f"🔔 Νέο Αίτημα από {data['name']} – ΨυκτικέςΛύσεις"
