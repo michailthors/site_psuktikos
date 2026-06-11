@@ -9,7 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # ─── ΡΥΘΜΙΣΕΙΣ EMAIL ──────────────────────────────────────
-# Αλλάξτε με τα πραγματικά στοιχεία του θείου σας
+# Αλλάξτε με τα πραγματικά στοιχεία σας.
 EMAIL_SENDER   = "info@psyktikeslyseis.gr"
 EMAIL_PASSWORD = "YOUR_EMAIL_PASSWORD"      # ή χρησιμοποιήστε App Password για Gmail
 EMAIL_RECEIVER = "thios@psyktikeslyseis.gr" # το email που θα λαμβάνει τα μηνύματα
