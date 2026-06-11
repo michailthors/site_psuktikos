@@ -51,7 +51,7 @@ def save_to_db(data: dict):
 
 
 def send_email(data: dict) -> bool:
-    """Στέλνει email στον θείο σας με τα στοιχεία του αιτήματος."""
+    """Στέλνει email με τα στοιχεία του αιτήματος."""
     try:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = f"🔔 Νέο Αίτημα από {data['name']} – ΨυκτικέςΛύσεις"
